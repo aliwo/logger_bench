@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "logger-bench"
+version = "0.1.0"
+description = ""
+authors = ["Triumph1 <seungwon.jeong@wesang.com>"]
+readme = "README.md"
+packages = [{include = "logger_bench"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+aiologger = "^0.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
