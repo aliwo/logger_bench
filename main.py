@@ -19,6 +19,8 @@ logger.setLevel(logging.INFO)
 @app.get("/sync")
 async def root():
     logger.info(LOG_MESSAGE)
+    logger.info(LOG_MESSAGE)
+    logger.info(LOG_MESSAGE)
     return {"message": "Hello World"}
 
 
@@ -32,6 +34,8 @@ async_logger = AsyncLogger(
 
 @app.get("/async")
 async def say_hello():
+    await async_logger.info(LOG_MESSAGE)
+    await async_logger.info(LOG_MESSAGE)
     await async_logger.info(LOG_MESSAGE)
     return {"message": f"Hello World"}
 
